@@ -1,0 +1,107 @@
+<!DOCTYPE html5>
+<head>
+    <title> Website haha lmao </title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<nav id = "taskbar_links">
+    <ul>
+        <li> <a href = "#"> Home </a> </li>
+        <li> <a href = "#"> Contacts </a> </li>
+        <li> <a href = "#"> About </a> </li>
+        <li> <a href = "#"> Support </a> </li>
+        <li> <a href = "#"> Blog Lists </a> </li>
+        <li> <a href = "#"> Featured </a> </li>
+    </ul>
+</nav>
+
+<body>
+    <div class = "intro_adv"> 
+        <div id = "title"> 
+            <h1>Website name</h1>
+        </div>
+
+        <div id = "checkbutton">
+            <button style = "padding: 15px 40px; width: 160px; height: 50px"> 
+                <!-- <a href = "https://www.youtube.com/watch?v=yWP5JsA_Rms" target = "_blank">
+                    Find more
+                </a> -->
+                <a href = "#chim">
+                    Find more
+                </a>
+            </button>
+        </div>
+        
+    </div>
+
+    <div class = "intro_main">
+        <h1> Who are we ? </h1>
+        
+        <br>
+
+        <h1>Tachim</h1>
+        
+        <!-- <img src = "Assets/Images/hehe.png"> -->
+    </div>
+
+    <div class = "blog_lists" onclick = "document.location='https://www.youtube.com/watch?v=IzSYlr3VI1A'; document.target = '_blank'">
+        <h1>Some blogs for you to read</h1>
+
+        <div id = "link_box">
+            <img src = "Assets/Images/Red_Arrow.png" style = "width: 300px; height: 200px; margin-left: 25px;">
+            
+            <h2 style = "position: relative; text-align: center; margin-top: 40px">Bam vao de tim hieu them</h2>
+        </div>
+    </div>
+
+    <div style = "height: 2000px"></div>
+    <div id = "chim"> 
+        <a href = "https://www.youtube.com/watch?v=FVAS9ETK1BM" target = "_blank">
+            Random link
+        </a>
+    </div>
+
+</body>
+
+<footer style = "position: fixed; bottom: 0px; right: 0px">
+    <strong>
+        &copy; 2025 Trend
+    </strong>
+</footer>
+
+<script>
+    setInterval(() => {
+        var window_width = parseFloat(window.innerWidth);
+        var window_height = parseFloat(window.innerHeight);
+
+        const intro_adv = document.getElementsByClassName("intro_adv");
+
+        intro_adv[0].style.width = (window_width).toString() + "px";
+        intro_adv[0].style.height = (window_height * 0.8).toString() + "px";
+
+        const intro_title = document.getElementById("title");    
+        intro_title.style.top = (window_height * 0.2).toString() + "px";
+
+
+        const check_button = document.getElementById("checkbutton");
+        check_button.style.top = (window_height * 0.3).toString() + "px";
+    }, 100);
+
+    setInterval(() => {
+        var window_width = parseFloat(window.innerWidth);
+        var window_height = parseFloat(window.innerHeight);
+        
+        const intro_main = document.getElementsByClassName("intro_main");
+
+        intro_main[0].style.width = (window_width).toString() + "px";
+        intro_main[0].style.height = (window_height * 1.2).toString() + "px";
+    }, 100);
+</script>

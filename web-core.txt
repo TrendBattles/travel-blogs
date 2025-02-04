@@ -1,0 +1,8 @@
+main:
+-Introduction
+
+-Aims
+
+-Lists
+
+-Additionals: Contacts, random images
