@@ -39,7 +39,6 @@
                 </a>
             </button>
         </div>
-        
     </div>
 
     <div class = "intro_main">
@@ -85,7 +84,7 @@
         const intro_adv = document.getElementsByClassName("intro_adv");
 
         intro_adv[0].style.width = (window_width).toString() + "px";
-        intro_adv[0].style.height = (window_height * 0.8).toString() + "px";
+        intro_adv[0].style.height = Math.max(500, window_height * 0.8).toString() + "px";
 
         const intro_title = document.getElementById("title");    
         intro_title.style.top = (window_height * 0.2).toString() + "px";
