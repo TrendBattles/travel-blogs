@@ -84,7 +84,7 @@
         const intro_adv = document.getElementsByClassName("intro_adv");
 
         intro_adv[0].style.width = (window_width).toString() + "px";
-        intro_adv[0].style.height = Math.max(500, window_height * 0.8).toString() + "px";
+        intro_adv[0].style.height = Math.max(500, Math.min(700, window_height * 0.8)).toString() + "px";
 
         const intro_title = document.getElementById("title");    
         intro_title.style.top = (window_height * 0.2).toString() + "px";
@@ -101,6 +101,6 @@
         const intro_main = document.getElementsByClassName("intro_main");
 
         intro_main[0].style.width = (window_width).toString() + "px";
-        intro_main[0].style.height = Math.max(500, window_height * 1.2).toString() + "px";
+        intro_main[0].style.height = Math.max(500, Math.min(700, window_height * 0.8)).toString() + "px";
     }, 100);
 </script>
