@@ -1,25 +1,65 @@
-.intro_adv {
-    background-color: #4C91E4;
-    background-attachment: fixed;
-    background-size: cover;
+@font-face {
+    font-family: Monts-Thin;
+    src: url(./Assets/Fonts/Montserrat/Montserrat-Thin.ttf);
+}
+@font-face {
+    font-family: Monts-Med;
+    src: url(./Assets/Fonts/Montserrat/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: Monts-Light;
+    src: url(./Assets/Fonts/Montserrat/Montserrat-Light.ttf);
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(./Assets/Fonts/Quicksand/Quicksand-Regular.ttf);
 }
 
-.intro_main {
+.intro_adv {
+    /* background-color: #4C91E4; */
+    background-attachment: fixed;
+    background-size: cover;
+
+    height: 800px;
+    z-index: 2;
+    text-align: center;
+}
+
+#intro_main {
     background-color: orange;
     background-attachment: fixed;
     background-size: cover;
+
+    height: 800px;
+
+    font-family: Quicksand;
+    font-size: 20px;
 }
 
-#title {
-    color: Red;
-    font-size: 30px;
+.intro_adv > #name {
+    color: Pink;
+
+    font-size: 50px;
 
     text-align: center;
     padding-top: 150px;
     padding-bottom: 50px;
+
+    font-family: Monts-Light;
 }
 
-#checkbutton {
+.intro_adv > #statement {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    font-size: 20px;
+    font-family: Monts-Light;
+    text-align: center;
+
+    color: #FFD372;
+}
+
+.intro_adv > #checkbutton {
     text-align: center;
     padding-top: 50px;
 }
@@ -28,7 +68,8 @@
     position: fixed;
     width: 100%;
 
-    /* background-color: black; */
+    font-family: Monts-Med;
+    z-index: 1;
 }
 
 
@@ -49,15 +90,125 @@
 
     font-size: 20px;
     color: White;
+
+    text-decoration: none;
 }
 
 #taskbar_links > ul > li > a:hover {
     color: orange;
     transition: 0.3s;
+
+    text-decoration: underline;
 }
 
 #link_box {
-    width: 350px;
-    height: 350px;
-    background-color: Red;
+    width: 450px;
+    height: 400px;
+
+    border: 2px solid gray;
+    border-radius: 8px;
+
+    background-color: White;
+    overflow: hidden;
+
+    text-align: center;
+    font-family: Monts-Light;
+
+    font-size: 20px;
+}
+
+#image_box {
+    width: 400px;
+    height: 300px;
+
+    border: 2px solid gray;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    margin: auto;
+    margin-top: 20px;
+}
+
+#image_box > img {
+    width: 400px;
+    height: 300px;
+
+    object-fit: cover;
+}
+
+#link_box > #blog_name {
+    padding: 10px;
+}
+#link_box > #blog_name:hover {
+    color: #49BBE5;
+    transition: 0.3s;
+}
+
+/* CSS */
+.keyboard-button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Quicksand;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  /* position: relative;
+  text-align: left;
+  text-decoration: none; */
+  transition: box-shadow .15s,transform .15s;
+  -webkit-user-select: none;
+  user-select: none;
+  /* touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform; */
+  font-size: 18px;
+}
+
+.keyboard-button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.keyboard-button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.keyboard-button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.video-container > video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#featured {
+    background-color: #649EF3;
+    height: 800px;
+
+    font-family: Quicksand;
+    font-size: 25px;
+}
+#featured > #title {
+    color: #3733A8;
+    text-align: center;
+
+    padding-bottom: 50px;
 }

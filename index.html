@@ -1,11 +1,16 @@
 <!DOCTYPE html5>
+
 <head>
     <title> Website haha lmao </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
         * {
             padding: 0px;
             margin: 0px;
+            scroll-behavior: smooth;
         }
     </style>
 
@@ -14,50 +19,79 @@
 
 <nav id = "taskbar_links">
     <ul>
-        <li> <a href = "#"> Home </a> </li>
-        <li> <a href = "#"> Contacts </a> </li>
-        <li> <a href = "#"> About </a> </li>
-        <li> <a href = "#"> Support </a> </li>
-        <li> <a href = "#"> Blog Lists </a> </li>
-        <li> <a href = "#"> Featured </a> </li>
+        <li> <a href = "#"> HOME </a> </li>
+        <li> <a href = "#blog_list"> BLOG LIST </a> </li>
+        <li> <a href = "#featured"> FEATURED </a> </li>
+        <li> <a href = "#intro_main"> ABOUT </a> </li>
+        <li> <a href = "#"> CONTACTS </a> </li>
+        <li> <a href = "#"> SUPPORT </a> </li>
     </ul>
 </nav>
 
 <body>
+    <div class = "video-container">
+        <video autoplay muted loop>
+            <source src = "./Assets/Videos/intro_video.mp4">
+        </video>
+    </div>
+
     <div class = "intro_adv"> 
-        <div id = "title">  
-            <h1>Website name</h1>
+        <div id = "name">  
+            <h1>TrendTravels</h1>
         </div>
 
+        <div id = "statement">
+            <h2>Đây là một trang blog chia sẻ góc nhìn du lịch của đất nước Việt Nam, đặc biệt là ở thành phố Huế.</h2>
+
+            <br>
+
+            <h2>
+                Hãy cùng chúng mình khám phá nào!
+            </h2>
+        </div>
+
+        
         <div id = "checkbutton">
-            <button style = "padding: 15px 40px; width: 160px; height: 50px"> 
-                <!-- <a href = "https://www.youtube.com/watch?v=yWP5JsA_Rms" target = "_blank">
-                    Find more
-                </a> -->
-                <a href = "#chim">
-                    Find more
+            <button class = "keyboard-button"> 
+                <a href = "#intro_main" style = "text-decoration: none;">
+                    Tìm hiểu thêm
                 </a>
             </button>
         </div>
     </div>
 
-    <div class = "intro_main">
-        <h1> Who are we ? </h1>
-        
-        <br>
+    <div style = "height: 75px"></div>
 
-        <h1>Tachim</h1>
+    <div id = "intro_main">
+        <div style = "height: 75px"></div>
+
+        Xin chào mọi người, tụi mình là những học sinh cuối cấp trường THPT Chuyên Quốc Học Huế.
+
+        <br> <br>
+
+        Sở thích đi ngắm vẻ đẹp thế giới bên ngoài chính là lý do cả đám đã gặp gỡ và hợp tác để làm nên 1 dự án nhỏ về du lịch.
         
-        <!-- <img src = "Assets/Images/hehe.png"> -->
+        <br> <br>
     </div>
 
-    <div class = "blog_lists" onclick = "document.location='https://www.youtube.com/watch?v=IzSYlr3VI1A'; document.target = '_blank'">
-        <h1>Some blogs for you to read</h1>
+    <div style = "height: 75px"></div>
+    
+    <div id = "featured">
+        <div style = "height: 75px"></div>
 
+        <h1 id = "title">
+            FEATURED
+        </h1>
+        
         <div id = "link_box">
-            <img src = "Assets/Images/Red_Arrow.png" style = "width: 300px; height: 200px; margin-left: 25px;">
+            <div id = "image_box">
+                <img src = "./Assets/Images/lang-gia-long.png">
             
-            <h2 style = "position: relative; text-align: center; margin-top: 40px">Bam vao de tim hieu them</h2>
+            </div>
+            
+            <h2 id = "blog_name">
+                Lăng Gia Long
+            </h2>
         </div>
     </div>
 
@@ -70,7 +104,7 @@
 
 </body>
 
-<footer style = "position: fixed; bottom: 0px; right: 0px">
+<footer style = "position: fixed; bottom: 0px; right: 0px; font-family: Monts-Med; color: Green">
     <strong>
         &copy; 2025 Trend
     </strong>
@@ -82,25 +116,10 @@
         var window_height = parseFloat(window.innerHeight);
 
         const intro_adv = document.getElementsByClassName("intro_adv");
-
         intro_adv[0].style.width = (window_width).toString() + "px";
-        intro_adv[0].style.height = Math.max(500, Math.min(700, window_height * 0.8)).toString() + "px";
 
-        const intro_title = document.getElementById("title");    
-        intro_title.style.top = (window_height * 0.2).toString() + "px";
+        const intro_main = document.getElementById("intro_main");
+        intro_main.style.width = (window_width).toString() + "px";
+    }, 100);    
 
-
-        const check_button = document.getElementById("checkbutton");
-        check_button.style.top = (window_height * 0.3).toString() + "px";
-    }, 100);
-
-    setInterval(() => {
-        var window_width = parseFloat(window.innerWidth);
-        var window_height = parseFloat(window.innerHeight);
-        
-        const intro_main = document.getElementsByClassName("intro_main");
-
-        intro_main[0].style.width = (window_width).toString() + "px";
-        intro_main[0].style.height = Math.max(500, Math.min(700, window_height * 0.8)).toString() + "px";
-    }, 100);
 </script>

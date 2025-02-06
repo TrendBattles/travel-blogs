@@ -1,7 +1,7 @@
 main:
 -Introduction
 
--Aims
+-Aims/Purposes
 
 -Lists
 
