@@ -51,13 +51,14 @@
         </div>
 
         
-        <div id = "checkbutton">
-            <button class = "keyboard-button"> 
+        
+        <button class = "keyboard-button"> 
+            <div id = "checkbutton">
                 <a href = "#intro_main" style = "text-decoration: none;">
                     Tìm hiểu thêm
                 </a>
-            </button>
-        </div>
+            </div>
+        </button>
     </div>
 
     <div style = "height: 75px"></div>
@@ -111,15 +112,17 @@
 </footer>
 
 <script>
-    setInterval(() => {
-        var window_width = parseFloat(window.innerWidth);
-        var window_height = parseFloat(window.innerHeight);
+    // setInterval(() => {
+    //     var window_width = parseFloat(window.innerWidth);
+    //     var window_height = parseFloat(window.innerHeight);
 
-        const intro_adv = document.getElementsByClassName("intro_adv");
-        intro_adv[0].style.width = (window_width).toString() + "px";
+    //     const intro_adv = document.getElementsByClassName("intro_adv");
+    //     intro_adv[0].style.width = (window_width).toString() + "px";
 
-        const intro_main = document.getElementById("intro_main");
-        intro_main.style.width = (window_width).toString() + "px";
-    }, 100);    
+    //     const intro_main = document.getElementById("intro_main");
+    //     intro_main.style.width = (window_width).toString() + "px";
+
+    //     console.log(window_width);
+    // }, 100);    
 
 </script>
