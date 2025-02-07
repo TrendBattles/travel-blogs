@@ -242,4 +242,50 @@
         padding: 10px 10px;
         font-size: 5px;
     }
+
+    #image_box {
+        width: 200px;
+        height: 100px;
+    
+        border: 2px solid gray;
+        border-radius: 8px;
+    
+        overflow: hidden;
+    
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+    #link_box {
+        width: 250px;
+        height: 170px;
+    
+        border: 2px solid gray;
+        border-radius: 8px;
+    
+        background-color: White;
+        overflow: hidden;
+    
+        text-align: center;
+        font-family: Monts-Light;
+    
+        font-size: 10px;
+
+        margin: auto;
+    }
+
+    #image_box > img {
+        width: 200px;
+        height: 100px;
+    
+        object-fit: cover;
+    }
+    
+    #link_box > #blog_name {
+        padding: 10px;
+    }
+    #link_box > #blog_name:hover {
+        color: #49BBE5;
+        transition: 0.3s;
+    }
 }
