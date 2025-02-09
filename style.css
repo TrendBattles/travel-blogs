@@ -15,6 +15,13 @@
     src: url(./Assets/Fonts/Quicksand/Quicksand-Regular.ttf);
 }
 
+@font-face {
+    font-family: Outfit-Light;
+    src: url(./Assets/Fonts/Outfit/Outfit-Light.ttf);
+}
+
+
+
 .intro_adv {
     /* background-color: #4C91E4; */
     background-attachment: fixed;
@@ -142,7 +149,7 @@
     padding: 10px;
 }
 
-.blog_container {
+.featured_container {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -265,7 +272,7 @@
         padding: 10px;
     }
 
-    .blog_container {
+    .featured_container {
         list-style: none;
         display: block;
     }
