@@ -21,71 +21,62 @@
     <link rel = "stylesheet" href = "../style.css">
 </head>
 
-<nav id = "taskbar_links">
-    <ul>
-        <li> <a href = "../" style = "color: Orange" target = "_blank"> HOME </a> </li>
-        <li> <a href = "#"> BLOG LIST </a> </li>
-        <li> <a href = "../#intro_main" target = "_blank"> ABOUT </a> </li>
-        <li> <a href = "../#featured" target = "_blank"> FEATURED </a> </li>
-        <li> <a href = "#contacts"> CONTACTS </a> </li>
-        <li> <a href = "../#support" target = "_blank"> SUPPORT </a> </li>
-    </ul>
-</nav>
-
 <body>    
-    <div class = "blog-container">
-        <div style = "height: 100px"></div>
-        Tìm hiểu thêm
-    </div>
-    <!-- <div id = "featured">
+    <header>
+        <nav id = "taskbar_links">
+            <ul>
+                <li> <a href = "../" target = "_blank"> HOME </a> </li>
+                <li> <a href = "#" style = "color: Orange"> BLOG LIST </a> </li>
+                <li> <a href = "../#intro_main" target = "_blank"> ABOUT </a> </li>
+                <li> <a href = "../#featured" target = "_blank"> FEATURED </a> </li>
+                <li> <a href = "#contacts"> CONTACTS </a> </li>
+                <li> <a href = "../#support" target = "_blank"> SUPPORT </a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class = "section-container">
         <div style = "height: 120px"></div>
 
         <h1 id = "title">
-            BLOG LIST
+            FEATURED
         </h1>
         
-        <ul class = "blog_container"> 
-            <li>
-                <div id = "link_box">
-                    <div id = "image_box">
-                        <img src = "../Assets/Images/lang-gia-long.png">
+        <div class = "blog-container"> 
+            <a id = "link_box" target = "_blank">
+                <div id = "image_box">
+                    <img src = "../Assets/Images/lang-gia-long.png" alt = "Image not found">
                     
-                    </div>
-                    
-                    <h2 id = "blog_name">
-                        Lăng Gia Long
-                    </h2>
                 </div>
-            </li>
+                    
+                <h3 id = "blog_name">
+                    Lăng Gia Long
+                </h3>
+            </a>
             
     
-            <li>
-                <div id = "link_box">
-                    <div id = "image_box">
-                        <img src = "../Assets/Images/lang-gia-long.png">
-                    
-                    </div>
-                    
-                    <h2 id = "blog_name">
-                        Lăng Gia Long
-                    </h2>
+            <a id = "link_box" href = "./blog-frame-test/" target = "_blank">
+                <div id = "image_box">
+                    <img src = "../Assets/blog-frame-test/nature.png" alt = "Image not found">
                 </div>
-            </li>
+                    
+                <h3 id = "blog_name">
+                    Wonderful insights in the nature
+                </h3>
+            </a>
 
-            <li>
-                <div id = "link_box">
-                    <div id = "image_box">
-                        <img src = "../Assets/Images/lang-gia-long.png">
+            <a id = "link_box" target = "_blank">
+                <div id = "image_box">
+                    <img src = "../Assets/Images/lang-gia-long.png" alt = "Image not found">
                     
-                    </div>
-                    
-                    <h2 id = "blog_name">
-                        Lăng Gia Long
-                    </h2>
                 </div>
-            </li>
-        </ul>
-    </div> -->
+                    
+                <h3 id = "blog_name">
+                    Lăng Gia Long
+                </h3>
+            </a>
+        </div>
+    </div>
 </body>
 
 <footer style = "position: fixed; bottom: 0px; right: 0px; font-family: Monts-Med; color: Green">
@@ -93,19 +84,3 @@
         &copy; 2025 Trend
     </strong>
 </footer>
-
-<script>
-    // setInterval(() => {
-    //     var window_width = parseFloat(window.innerWidth);
-    //     var window_height = parseFloat(window.innerHeight);
-
-    //     const intro_adv = document.getElementsByClassName("intro_adv");
-    //     intro_adv[0].style.width = (window_width).toString() + "px";
-
-    //     const intro_main = document.getElementById("intro_main");
-    //     intro_main.style.width = (window_width).toString() + "px";
-
-    //     console.log(window_width);
-    // }, 100);    
-
-</script>

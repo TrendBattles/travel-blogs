@@ -14,13 +14,65 @@
     font-family: Quicksand;
     src: url(./Assets/Fonts/Quicksand/Quicksand-Regular.ttf);
 }
-
+@font-face {
+    font-family: Quicksand-Light;
+    src: url(./Assets/Fonts/Quicksand/Quicksand-Light.ttf);
+}
 @font-face {
     font-family: Outfit-Light;
     src: url(./Assets/Fonts/Outfit/Outfit-Light.ttf);
 }
 
 
+.quicksand {
+    font-family: Quicksand;
+}
+.quicksand-light {
+    font-family: Quicksand-Light;
+}
+.outfit-light {
+    font-family: Outfit-Light;
+}
+.monts-thin {
+    font-family: Monts-Thin;
+}
+.monts-med {
+    font-family: Monts-Med;
+}
+
+.text-red {
+    color: red;
+}
+.text-yellow {
+    color: yellow;
+}
+.text-blue {
+    color: blue;
+}
+.text-black {
+    color: black;
+}
+.text-pink {
+    color: pink;
+}
+.text-orange {
+    color: orange;
+}
+.text-green {
+    color: green;
+}
+.text-purple {
+    color: purple;
+}
+.text-center {
+    text-align: center;
+}
+.medium-size {
+    font-size: 30px;
+}
+.small-size {
+    font-size: 20px;
+}
 
 .intro_adv {
     /* background-color: #4C91E4; */
@@ -73,6 +125,7 @@
 #taskbar_links {
     position: fixed;
     width: 100%;
+    top: 0;
 
     font-family: Monts-Med;
     z-index: 1;
@@ -107,6 +160,12 @@
     text-decoration: underline;
 }
 
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 #link_box {
     border: 2px solid gray;
     border-radius: 8px;
@@ -118,27 +177,39 @@
     font-family: Monts-Light;
 
     font-size: 20px;
+
+    box-shadow: none;
+    height: 450px;
+
+    text-decoration: none;
+
+    color: Black;
 }
 
 #link_box:hover {
     background-color: #89CC37;
     color: #670F88;
     transition: 0.3s;
+    transform: translateY(-5px);
+
+    box-shadow: 8px 12px gray;
 }
 
-#image_box {
+#link_box > #image_box {
     width: 400px;
     height: 300px;
 
     border: 2px solid gray;
     border-radius: 8px;
 
+    box-sizing: border-box;
+
     overflow: hidden;
 
     margin: 20px auto;
 }
 
-#image_box > img {
+#link_box > #image_box > img {
     width: 400px;
     height: 300px;
 
@@ -147,13 +218,9 @@
 
 #link_box > #blog_name {
     padding: 10px;
+    line-height: 50px;
 }
 
-.featured_container {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
 #link_box {
     padding: 25px 25px;
     margin: 15px 15px;
@@ -213,20 +280,50 @@
     z-index: -1;
 }
 
-#featured {
+.section-container {
     background-color: #649EF3;
-    height: 800px;
+    min-height: 800px;
 
     font-family: Quicksand;
     font-size: 25px;
 }
-#featured > #title {
+.section-container > #title {
     color: #3733A8;
     text-align: center;
 
     padding-bottom: 50px;
 }
 
+.blog-box {
+    max-width: 1200px;
+    margin: auto;
+}
+.blog-box > .attachment {
+    max-width: 800px;
+
+    border-radius: 5px;
+    border: 2px solid gray;
+    background-color: white;
+
+    margin: 100px auto 100px;
+
+    padding: 20px;
+    box-shadow: 5px 5px rgb(163, 163, 163);
+
+    font-size: 20px;
+}
+
+.blog-box > .attachment > img {
+    width: 100%;
+    max-height: 80%;
+    object-fit: fill;
+}
+
+.blog-box > .text {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    line-height: 50px;
+}
 
 @media only screen and (max-width: 800px) {
     .intro_adv > #name {
@@ -251,18 +348,19 @@
         font-size: 10px;
     }
 
-    #image_box {
+    #link_box > #image_box {
         width: 300px;
         height: 200px;
     }
     
     #link_box {
         width: 400px;
+        height: 350px;
         font-size: 15px;
         margin: 50px auto;
     }
 
-    #image_box > img {
+    #link_box > #image_box > img {
         width: 300px;
         height: 200px;
         margin: auto;
@@ -272,38 +370,49 @@
         padding: 10px;
     }
 
-    .featured_container {
-        list-style: none;
-        display: block;
-    }
     #link_box {
         padding: 25px 25px;
     }
 
-    #featured {
+    .section-container {
         min-height: 1500px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    #image_box {
+    #link_box > #image_box {
         width: 200px;
         height: 100px;
     }
     
     #link_box {
         width: 200px;
+        height: 300px;
         font-size: 15px;
         margin: 50px auto;
     }
 
-    #image_box > img {
+    .blog-container {
+        flex-direction: column;
+    }
+    #link_box > #image_box > img {
         width: 200px;
         height: 100px;
         margin: auto;
     }
 
-    #featured {
+    .section-container {
         min-height: 1200px;
+    }
+
+    .blog-box {
+        font-size: 20px;
+    }
+
+    .medium-size {
+        font-size: 20px;
+    }
+    .small-size {
+        font-size: 10px;
     }
 }
