@@ -1,7 +1,7 @@
 <!DOCTYPE html5>
 
 <head>
-    <title>QTravel</title>
+    <title>TrendTravels</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,18 +21,20 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 
-<nav id = "taskbar_links">
-    <ul>
-        <li> <a href = "#"> HOME </a> </li>
-        <li> <a href = "#blog_list"> BLOG LIST </a> </li>
-        <li> <a href = "#intro_main"> ABOUT </a> </li>
-        <li> <a href = "#featured"> FEATURED </a> </li>
-        <li> <a href = "#"> CONTACTS </a> </li>
-        <li> <a href = "#"> SUPPORT </a> </li>
-    </ul>
-</nav>
-
 <body>
+    <header>
+        <nav id = "taskbar_links">
+            <ul>
+                <li> <a href = "#" style = "color: Orange"> HOME </a> </li>
+                <li> <a href = "/blog-list" target = "_blank"> BLOG LIST </a> </li>
+                <li> <a href = "#intro_main"> ABOUT </a> </li>
+                <li> <a href = "#featured"> FEATURED </a> </li>
+                <li> <a href = "#contacts"> CONTACTS </a> </li>
+                <li> <a href = "#support"> SUPPORT </a> </li>
+            </ul>
+        </nav>
+    </header>
+
     <div class = "video-container">
         <video autoplay muted loop style = "min-height: 400px; max-height: 100%;">
             <source src = "./Assets/Videos/intro_video.mp4">
@@ -41,7 +43,7 @@
 
     <div class = "intro_adv"> 
         <div id = "name">  
-            <h1>QTravel</h1>
+            <h1>TrendTravels</h1>
         </div>
 
         <div id = "statement">
@@ -81,54 +83,47 @@
 
     <div style = "height: 75px"></div>
     
-    <div id = "featured">
-        <div style = "height: 75px"></div>
+    <div class = "section-container" id = "featured">
+        <div style = "height: 120px"></div>
 
         <h1 id = "title">
             FEATURED
         </h1>
         
-        <ul class = "blog_container"> 
-            <li>
-                <div id = "link_box">
-                    <div id = "image_box">
-                        <img src = "./Assets/Images/lang-gia-long.png">
+        <div class = "blog-container"> 
+            <a id = "link_box" target = "_blank">
+                <div id = "image_box">
+                    <img src = "./Assets/Images/lang-gia-long.png" alt = "Image not found">
                     
-                    </div>
-                    
-                    <h2 id = "blog_name">
-                        Lăng Gia Long
-                    </h2>
                 </div>
-            </li>
+                    
+                <h3 id = "blog_name">
+                    Lăng Gia Long
+                </h3>
+            </a>
             
     
-            <li>
-                <div id = "link_box">
-                    <div id = "image_box">
-                        <img src = "./Assets/Images/lang-gia-long.png">
-                    
-                    </div>
-                    
-                    <h2 id = "blog_name">
-                        Lăng Gia Long
-                    </h2>
+            <a id = "link_box" href = "./blog-frame-test/" target = "_blank">
+                <div id = "image_box">
+                    <img src = "./Assets/blog-frame-test/nature.png" alt = "Image not found">
                 </div>
-            </li>
+                    
+                <h3 id = "blog_name">
+                    Wonderful insights in the nature
+                </h3>
+            </a>
 
-            <li>
-                <div id = "link_box">
-                    <div id = "image_box">
-                        <img src = "./Assets/Images/lang-gia-long.png">
+            <a id = "link_box" target = "_blank">
+                <div id = "image_box">
+                    <img src = "./Assets/Images/lang-gia-long.png" alt = "Image not found">
                     
-                    </div>
-                    
-                    <h2 id = "blog_name">
-                        Lăng Gia Long
-                    </h2>
                 </div>
-            </li>
-        </ul>
+                    
+                <h3 id = "blog_name">
+                    Lăng Gia Long
+                </h3>
+            </a>
+        </div>
     </div>
 
     <div style = "height: 2000px"></div>
@@ -145,19 +140,3 @@
         &copy; 2025 Trend
     </strong>
 </footer>
-
-<script>
-    // setInterval(() => {
-    //     var window_width = parseFloat(window.innerWidth);
-    //     var window_height = parseFloat(window.innerHeight);
-
-    //     const intro_adv = document.getElementsByClassName("intro_adv");
-    //     intro_adv[0].style.width = (window_width).toString() + "px";
-
-    //     const intro_main = document.getElementById("intro_main");
-    //     intro_main.style.width = (window_width).toString() + "px";
-
-    //     console.log(window_width);
-    // }, 100);    
-
-</script>
