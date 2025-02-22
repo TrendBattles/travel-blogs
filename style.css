@@ -147,7 +147,7 @@
     display: block;
     padding: 20px 30px;
 
-    font-size: 20px;
+    font-size: 2vw;
     color: White;
 
     text-decoration: none;
@@ -156,8 +156,6 @@
 #taskbar_links > ul > li > a:hover {
     color: orange;
     transition: 0.3s;
-
-    text-decoration: underline;
 }
 
 .blog-container {
@@ -182,8 +180,8 @@
     height: 450px;
 
     text-decoration: none;
-
     color: Black;
+    transition: 0.3s;
 }
 
 #link_box:hover {
@@ -281,7 +279,6 @@
 }
 
 .section-container {
-    background-color: #649EF3;
     min-height: 800px;
 
     font-family: Quicksand;
@@ -295,7 +292,7 @@
 }
 
 .blog-box {
-    max-width: 1200px;
+    width: 80%;
     margin: auto;
 }
 .blog-box > .attachment {
@@ -313,11 +310,13 @@
     font-size: 20px;
 }
 
-.blog-box > .attachment > img {
+.blog-box > .attachment > img, video {
     width: 100%;
+    min-height: 60%;
     max-height: 80%;
     object-fit: fill;
 }
+
 
 .blog-box > .text {
     margin-top: 100px;
@@ -345,7 +344,6 @@
     
     #taskbar_links > ul > li > a {
         padding: 10px 10px;
-        font-size: 10px;
     }
 
     #link_box > #image_box {
