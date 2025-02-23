@@ -33,24 +33,21 @@
                 <li> <a href = "./blog-list" target = "_blank"> BLOG LIST </a> </li>
                 <li> <a href = "#intro_main"> ABOUT </a> </li>
                 <li> <a href = "#featured"> FEATURED </a> </li>
-                <li> <a href = "#contacts"> CONTACTS </a> </li>
                 <li> <a href = "#support"> SUPPORT </a> </li>
             </ul>
         </nav>
     </header>
 
-    <div class = "video-container">
-        <video autoplay muted loop style = "min-height: 400px; max-height: 100%;">
+    <div class = "intro_adv"> 
+        <video autoplay muted loop class = "video-container text-justify">
             <source src = "./Assets/Videos/intro_video.mp4">
         </video>
-    </div>
-
-    <div class = "intro_adv"> 
-        <div id = "name">  
+        
+        <div class = "text-center" id = "name">  
             <h1>QTravels</h1>
         </div>
 
-        <div id = "statement">
+        <div class = "text-center" id = "statement">
             <h2>Đây là một trang blog chia sẻ góc nhìn du lịch của đất nước Việt Nam, đặc biệt là ở thành phố Huế.</h2>
 
             <br>
@@ -61,35 +58,59 @@
         </div>
 
         
-        
-        <a href = "#intro_main" style = "text-decoration: none;">
-            <button class = "keyboard-button"> 
-                <div id = "checkbutton">
-                    Tìm hiểu thêm
-                </div>
-            </button>
-        </a>
+        <div class = "text-center">
+            <a href = "#intro_main" style = "text-decoration: none;">
+                <button class = "keyboard-button"> 
+                    <div id = "checkbutton" class = "text-center">
+                        Tìm hiểu thêm
+                    </div>
+                </button>
+            </a>
+        </div>
     </div>
 
     <div style = "height: 75px"></div>
 
-    <div id = "intro_main">
-        <div style = "height: 75px"></div>
+    <div class = "blog-box quicksand medium-size" id = "intro_main">
+        <div class = "text">
+            <h2 class = "text-red text-justify"> 
+                Xin chào mọi người, tụi mình là những học sinh cuối cấp trường THPT Chuyên Quốc Học Huế khóa 2022-2025.
+            </h2>    
+            
+            <br>
 
-        Xin chào mọi người, tụi mình là những học sinh cuối cấp trường THPT Chuyên Quốc Học Huế.
+            <p class = "text-justify">
+                Sở thích đi ngắm vẻ đẹp thế giới bên ngoài chính là lý do cả đám đã gặp gỡ và hợp tác để làm nên 1 dự án nhỏ về du lịch.
+                Tụi mình muốn thông qua những nội dung tích góp được từ nhiều nguồn cũng như trải nghiệm bản thân để nhắn nhủ với các bạn rằng ngoài thế giới kia còn biết
+                bao nhiều thứ mang âm hưởng cuốn hút lòng người và sẽ là những chuyến đi khó quên trong ký ức chúng ta.
+            </p>
+            
+            <br> 
 
-        <br> <br>
+            <h2 class = "text-orange text-justify">
+                Giới thiệu thành viên:
+            </h2>
 
-        Sở thích đi ngắm vẻ đẹp thế giới bên ngoài chính là lý do cả đám đã gặp gỡ và hợp tác để làm nên 1 dự án nhỏ về du lịch.
-        
-        <br> <br>
+            <br>
+
+            <ul class = "text-justify">    
+                <li>
+                    Nguyễn Nguyễn Gia Bảo (Trend - Main Developer)
+                </li>
+                <li>
+                    Đồng Lê Đức Minh (dldm - Designer)
+                </li>
+                <li>
+                    Nguyễn Tấn Minh (ntmin - Designer, Blog Writer)
+                </li>
+                <li>
+                    Nguyễn Phan Minh Nhật (meoxu - Blog Writer)
+                </li>
+            </ul>
+        </div>
     </div>
-
-    <div style = "height: 75px"></div>
     
     <div class = "section-container" id = "featured">
-        <div style = "height: 120px"></div>
-
         <h1 id = "title">
             FEATURED
         </h1>
@@ -130,13 +151,43 @@
         </div>
     </div>
 
-    <div style = "width: 100vw; display: flex; justify-content: center;">
-        <img style = "width: 60vw;" src = "https://count.getloli.com/@Views?name=Views&theme=miku&padding=10&offset=0&align=center&scale=1&pixelated=1&darkmode=auto">
-    </div>
-</body>
+    <!-- <div class = "blog-box quicksand test-justify">
+        <div class = "text medium-size">
+            <h2 class = "text-blue">
+                Views count since February 22nd 2025:
+            </h2>
+        </div>
 
-<footer style = "position: fixed; bottom: 0px; right: 0px; font-family: Monts-Med; color: Green">
-    <strong>
-        &copy; 2025 QTeam
-    </strong>
-</footer>
+        <img style = "width: 60%;" src = "https://count.getloli.com/@Views?name=Views&theme=miku&padding=10&offset=0&align=center&scale=1&pixelated=1&darkmode=auto">
+    </div> -->
+
+    <div class = "blog-box quicksand medium-size" id = "support">
+        <div class = "text">
+            <h2 class = "text-red test-justify">
+                We want to give some sponsors to the creators that allow us to use your materials.
+            </h2>
+
+            <br>
+
+            <ul class = "text-justify">
+                <li>
+                    <a href = "https://www.youtube.com/@vuover4k">VuOver</a>
+                </li>
+
+                <li>
+                    <a href = "https://www.youtube.com/@DIN_FILMS/">DIN FILMS</a>
+                </li>
+
+                <li>
+                    <a href = "https://chatgpt.com/">ChatGPT</a> for helping suggest some references for designs.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class = "footer quicksand">
+        <div class = "text-center text-white">
+            <h2>&copy; 2025 QTeam. All Rights Reserved.</h2>
+        </div>
+    </footer>
+</body>
