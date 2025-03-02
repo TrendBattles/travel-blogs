@@ -29,7 +29,8 @@ Sau đó phải tạo 1 file `index.html` nằm trong thư mục đó và làm d
 ....
 ```
 <br>
-Mình để ý ở trong [định dạng CSS cho sẵn](https://github.com/TrendBattles/travel-blogs/blob/master/style.css), ở mấy dòng đầu có xuất hiện các class như:
+
+Mình để ý ở trong [file CSS có sẵn](https://github.com/TrendBattles/travel-blogs/blob/master/style.css), ở mấy dòng đầu có xuất hiện các class như:
 
 ```
 .text-red, .text-yellow, .text-green, ...
