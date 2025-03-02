@@ -300,7 +300,7 @@
 
     padding: 75px 0 75px 0;
 }
-.blog-box > .attachment {
+.blog-box .attachment {
     max-width: 800px;
 
     border-radius: 5px;
@@ -315,7 +315,7 @@
     font-size: 20px;
 }
 
-.blog-box > .attachment > img, .blog-box > .attachment > video {
+.blog-box .attachment > img, .blog-box .attachment > video {
     width: 100%;
     min-height: 60%;
     max-height: 80%;
