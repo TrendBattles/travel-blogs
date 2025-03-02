@@ -148,7 +148,7 @@
     display: block;
     padding: 20px 30px;
 
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: White;
 
     text-decoration: none;
@@ -363,6 +363,7 @@
     
     #taskbar_links > ul > li > a {
         padding: 10px 10px;
+        font-size: 2vw;
     }
 
     #link_box > #image_box {
@@ -398,6 +399,10 @@
         height: 100px;
     }
     
+    #taskbar_links > ul > li > a {
+        font-size: 3vw;
+    }
+
     #link_box {
         width: 200px;
         height: 300px;
