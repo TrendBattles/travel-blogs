@@ -1,3 +1,5 @@
+/*Font Inits*/
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
 .plus-jakarta-sans-0abcd{
     font-family: "Plus Jakarta Sans", serif;
@@ -47,6 +49,7 @@
     font-family: Monts-Med;
 }
 
+/*Text Inits*/
 .text-white {
     color: White;
 }
@@ -95,69 +98,206 @@
     line-height: 50px;
 }
 
-.intro_adv {
-    /* background-color: #4C91E4; */
-    background-attachment: fixed;
-    background-size: cover;
+/*Navbar Inits*/
+.menu-button {
+    width: 100%;
+    background-color: #000000;
+    display: block;
+}
+#menu-button {
+    padding: 10px 10px;
+    font-size: 18px;
 
-    height: 100vh;
-    min-height: 650px;
-    z-index: 2;
+    background-color: #000000;
+    color: Orange;
 }
 
-
-.intro_adv > #name {
-    font-size: 50px;
-
-    padding-top: 150px;
-    padding-bottom: 50px;
-}
-
-.intro_adv > #statement {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    
-    font-size: 20px;
-    font-family: Monts-Light;
-
-    color: #FFD372;
-}
-
-#taskbar_links {
-    position: fixed;
+#navbar {
     width: 100%;
     top: 0;
-
     font-family: Monts-Med;
     z-index: 1;
-}
-
-
-#taskbar_links > ul {
-    list-style: none;
-    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    display: flex; /* Add flex display */
+    justify-content: center; /* Changed from space-between to center to center the navigation */
+    align-items: center; /* Center items vertically */
     background-color: #000000;
 }
 
-#taskbar_links > ul > li {
-    display: inline;
-    float: left;
+#navbar > ul {
+    list-style: none;
+    overflow: hidden;
 }
 
-#taskbar_links > ul > li > a {
+#navbar > ul > li {
+    display: inline-block;
+}
+
+#navbar > ul > li > a {
     display: block;
     padding: 20px 30px;
 
-    font-size: 1.5vw;
+    font-size: 1em;
     color: White;
 
     text-decoration: none;
 }
 
-#taskbar_links > ul > li > a:hover {
+#navbar > ul > li > a:hover {
     color: orange;
     transition: 0.3s;
 }
+
+/* Search box styling */
+.search-container {
+    display: flex;
+    padding-right: 30px;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.search-box {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    font-family: Monts-Med;
+    font-size: 14px;
+    width: 12vw;
+    min-width: 150px;
+    opacity: 1;
+    outline: none;
+}
+
+.search-box::placeholder {
+    color: #999;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    color: orange;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    z-index: 1; /* Ensure button stays on top */
+}
+
+/*Slide transition hehe*/
+#intro-video.hidden, #intro-adv.hidden {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+}
+
+#intro-video {
+    height: 100vh;
+    /* background-color: #000000; */
+
+    z-index: 2;
+
+    opacity: 1;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+
+#intro-video > #statement {
+    font-size: 2vw;
+    font-family: Monts-Light;
+
+    color: #FFD372;
+}
+
+
+#intro-adv {
+    height: 100vh;
+    z-index: 2;
+    
+    background-image: url("./Assets/Images/gradient-emrald-background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: grid;
+    place-items: center;
+
+    opacity: 1;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+
+#intro-adv > #name {
+    font-size: 2.5em;
+}
+
+#intro-adv > #statement {
+    font-size: calc(1vw + 1em);
+    font-family: Monts-Light;
+
+    color: #FFD372;
+}
+
+/* Button Inits*/
+.keyboard-button {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: Quicksand;
+    height: 5vh;
+    min-height: 60px;
+    min-width: 200px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* position: relative;
+    text-align: left;
+    text-decoration: none; */
+    transition: box-shadow .15s,transform .15s;
+    -webkit-user-select: none;
+    user-select: none;
+    /* touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform; */
+    font-size: calc(0.5em + 1vh);
+
+    z-index: 2;
+}
+  
+.keyboard-button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+  
+.keyboard-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+  
+.keyboard-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
 
 .blog-container {
     display: flex;
@@ -225,60 +365,14 @@
     margin: 15px 15px;
 }
 
-/* CSS */
-.keyboard-button {
-  align-items: center;
-  appearance: none;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: Quicksand;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  /* position: relative;
-  text-align: left;
-  text-decoration: none; */
-  transition: box-shadow .15s,transform .15s;
-  -webkit-user-select: none;
-  user-select: none;
-  /* touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform; */
-  font-size: 18px;
-}
-
-.keyboard-button:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-
-.keyboard-button:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-
-.keyboard-button:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
-}
-
-
+/*ChatGPT helped me fix interaction issues with slide transitions*/
 .video-container {
     width: 100%;
-    height: 100vh;
-    min-height: 600px;
+    height: 100%;
     position: absolute;
     object-fit: cover;
     z-index: -1;
+    pointer-events: none;
 }
 
 .section-container {
@@ -344,26 +438,22 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .intro_adv > #name {
-        font-size: 20px;
-        padding-top: 100px;
-    }
-    .intro_adv > #statement {
-        font-size: 10px;
-    }
-
-    #checkbutton {
-        font-size: 10px;
-    }
-
     .keyboard-button {
         height: 30px;
         width: 100px;
     }
-    
-    #taskbar_links > ul > li > a {
-        padding: 10px 10px;
+
+    #navbar > ul > li > a {
+        padding: 20px 10px;
         font-size: 2vw;
+    }
+
+    .search-container {
+        padding-right: 15px;
+    }
+
+    #intro-adv > #name {
+        font-size: 2em;
     }
 
     #link_box > #image_box {
@@ -393,14 +483,34 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     #link_box > #image_box {
         width: 200px;
         height: 100px;
     }
+
+    #navbar {
+        flex-direction: column;
+        padding: 10px 0;
+        transition: top 0.3s;
+    }
+    #navbar > ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navbar > ul > li > a {
+        padding: 10px 10px;
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
     
-    #taskbar_links > ul > li > a {
-        font-size: 3vw;
+    .search-container {
+        width: 100%;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
     }
 
     #link_box {
@@ -430,5 +540,11 @@
     .small-size {
         font-size: 10px;
         line-height: 30px;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    #intro-video, #intro-adv {
+        height: 500px;
     }
 }
