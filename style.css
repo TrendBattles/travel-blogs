@@ -216,8 +216,8 @@
 #intro-video > #statement {
     font-size: calc(1vw + 1em);
     font-family: Monts-Light;
-
     color: #FFD372;
+    background-color: #000000;
 }
 
 
@@ -368,8 +368,8 @@
     height: 100%;
     position: absolute;
     object-fit: cover;
-    z-index: -1;
-    pointer-events: none;
+    z-index: 0;
+    /* pointer-events: none; */
 }
 
 .section-container {
