@@ -29,6 +29,34 @@
         body {
             background-color: #f3f2f2;
         }
+
+        /* Custom styles for blog cards */
+        #link_box {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        #link_box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        #link_box #image_box {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        #link_box #blog_name {
+            padding: 15px;
+            font-size: 1.1em;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        #link_box:hover #blog_name {
+            color: #3733A8;
+        }
     </style>
 
     <link rel = "stylesheet" href = "../style.css">
@@ -67,12 +95,19 @@
         </nav>
     </header>
 
-    <div class = "section-container">
-        <h1 id = "title">
+    <div class="blog-box quicksand" style="text-align: center; padding: 60px 20px;">
+        <h1 style="font-size: 2.5em; margin-bottom: 20px; color: #3733A8;">Welcome to our Blog Collection</h1>
+        <p style="font-size: 1.2em; color: #666; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+            Explore our curated collection of travel stories, local insights, and destination guides. From the historic streets of Huế to natural wonders, discover the beauty and culture of Vietnam through our eyes.
+        </p>
+    </div>
+
+    <div class = "section-container" style="margin-top: 40px;">
+        <h1 id = "title" style="font-family: Monts-Med; text-transform: uppercase; letter-spacing: 2px;">
             THÀNH PHỐ HUẾ
         </h1>
         
-        <div class = "blog-container"> 
+        <div class = "blog-container" style="padding: 20px 0;"> 
             <a id = "link_box" href = "../top-dia-diem-hue-check-in/" target = "_blank">
                 <div id = "image_box">
                     <img src = "../top-dia-diem-hue-check-in/song-huong.png" alt = "Image not found">
@@ -96,11 +131,11 @@
     </div>
 
     <div class = "section-container">
-        <h1 id = "title">
+        <h1 id = "title" style="font-family: Monts-Med; text-transform: uppercase; letter-spacing: 2px;">
             OTHERS
         </h1>
         
-        <div class = "blog-container">     
+        <div class = "blog-container" style="padding: 20px 0;">     
             <a id = "link_box" href = "../blog-frame-test/" target = "_blank">
                 <div id = "image_box">
                     <img src = "../blog-frame-test/nature.png" alt = "Image not found">
