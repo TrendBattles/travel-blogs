@@ -68,7 +68,7 @@
     </header>
 
     <div id = "intro-video" class = "hidden">
-        <video autoplay muted loop class = "video-container">
+        <video autoplay muted loop preload = "auto" class = "video-container">
             <source src = "./Assets/Videos/intro_video.mp4">
         </video>
 
@@ -81,14 +81,14 @@
 
             <button class = "keyboard-button" onclick = "screenTransition()"> 
                 <div class = "text-red">
-                    Chuyển cảnh
+                    Quay lại
                 </div>
             </button>
         </div>
     </div>
     
 
-    <div id = "intro-adv"> 
+    <div id = "intro-adv" class = "visible"> 
         <div class = "text-center plus-jakarta-sans-0abcd text-white" id = "name">  
             <h1>QTravels</h1>
         </div>
@@ -100,14 +100,12 @@
 
             <button class = "keyboard-button" onclick = "screenTransition()"> 
                 <div class = "text-red">
-                    Chuyển cảnh
+                    Xem tiếp
                 </div>
             </button>
-        </div>
 
-        
+            <br> <br>
 
-        <div class = "text-center" id = "statement">
             <h2>Hãy cùng khám phá du lịch khắp Việt Nam nào!</h2>
 
             <br>
@@ -283,6 +281,8 @@
     
     function screenTransition() {
         intro_video.classList.toggle("hidden");
+        intro_video.classList.toggle("visible");
         intro.classList.toggle("hidden");
+        intro.classList.toggle("visible");
     }
 </script>
