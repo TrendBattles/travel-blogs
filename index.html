@@ -67,57 +67,61 @@
         </nav>
     </header>
 
-    <div id = "intro-video" class = "hidden">
-        <video autoplay muted loop preload = "auto" class = "video-container">
-            <source src = "./Assets/Videos/intro_video.mp4" type = "video/mp4">
-            <source src = "./Assets/Videos/intro_video.mov" type = "video/mov">
-        </video>
-
-        <div class = "text-center" id = "statement">
-            <br>
-
-            <h2>Quay lại màn hình gốc</h2>
-
-            <br>
-
-            <button class = "keyboard-button" onclick = "screenTransition()"> 
-                <div class = "text-red">
-                    Quay lại
-                </div>
-            </button>
+    <div id = "transition-content">
+        <div id = "intro-video" class = "hidden">
+            <video autoplay muted loop preload = "auto" class = "video-container">
+                <source src = "./Assets/Videos/intro_video.mov" type = "video/mov">
+                <source src = "./Assets/Videos/intro_video.webm" type = "video/webm">
+                <source src = "./Assets/Videos/intro_video.mp4" type = "video/mp4">
+            </video>
+    
+            <div class = "text-center" id = "statement">
+                <br>
+    
+                <h2>Quay lại màn hình gốc</h2>
+    
+                <br>
+    
+                <button class = "keyboard-button" onclick = "screenTransition()"> 
+                    <div class = "text-red">
+                        Quay lại
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+    
+        <div id = "intro-adv" class = "visible"> 
+            <div class = "text-center plus-jakarta-sans-0abcd text-white" id = "name">  
+                <h1>QTravels</h1>
+            </div>
+    
+            <div class = "text-center" id = "statement">
+                <h2>Bấm vào nút dưới này để xem đoạn video du lịch ngắn. </h2>
+    
+                <br>
+    
+                <button class = "keyboard-button" onclick = "screenTransition()"> 
+                    <div class = "text-red">
+                        Xem tiếp
+                    </div>
+                </button>
+    
+                <br> <br>
+    
+                <h2>Hãy cùng khám phá du lịch khắp Việt Nam nào!</h2>
+    
+                <br>
+    
+                <a href = "#intro_main" style = "text-decoration: none;">
+                    <button class = "keyboard-button"> 
+                        Tìm hiểu thêm
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
     
-
-    <div id = "intro-adv" class = "visible"> 
-        <div class = "text-center plus-jakarta-sans-0abcd text-white" id = "name">  
-            <h1>QTravels</h1>
-        </div>
-
-        <div class = "text-center" id = "statement">
-            <h2>Bấm vào nút dưới này để xem đoạn video du lịch ngắn. </h2>
-
-            <br>
-
-            <button class = "keyboard-button" onclick = "screenTransition()"> 
-                <div class = "text-red">
-                    Xem tiếp
-                </div>
-            </button>
-
-            <br> <br>
-
-            <h2>Hãy cùng khám phá du lịch khắp Việt Nam nào!</h2>
-
-            <br>
-
-            <a href = "#intro_main" style = "text-decoration: none;">
-                <button class = "keyboard-button"> 
-                    Tìm hiểu thêm
-                </button>
-            </a>
-        </div>
-    </div>
 
     <div class = "blog-box quicksand medium-size" id = "intro_main">
         <div class = "text">
@@ -279,7 +283,6 @@
 <script>
     const intro_video = document.getElementById("intro-video");
     const intro = document.getElementById("intro-adv");
-    
     function screenTransition() {
         intro_video.classList.toggle("hidden");
         intro_video.classList.toggle("visible");
