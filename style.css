@@ -214,7 +214,7 @@
 
 
 #intro-video > #statement {
-    font-size: 2vw;
+    font-size: calc(1vw + 1em);
     font-family: Monts-Light;
 
     color: #FFD372;
