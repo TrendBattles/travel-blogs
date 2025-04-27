@@ -1,22 +1,22 @@
 <!DOCTYPE html5>
 
 <head>
-    <title>Blog List</title>
+    <title></title>
 
     <meta charset = "utf-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1" />
-    <meta property = "og:description" content="Khám phá địa điểm du lịch khắp Việt Nam, đặc biệt ở thành phố Huế thơ mộng" />
-    <meta property = "og:url" content = "https://trendbattles.github.io/travel-blogs/" />
+    <meta property = "og:description" content = "" />
+    <meta property = "og:url" content = "" />
     
-    <meta property = "og:image" content = "https://trendbattles.github.io/travel-blogs/Assets/Images/Red_Arrow.jpg" />
-    <meta property = "og:image:type" content = "image/jpeg" />
+    <meta property = "og:image" content = "" />
+    <meta property = "og:image:type" content = "image/png" />
     <meta property = "og:image:width" content = "400" />
     <meta property = "og:image:height" content = "400" />
-
-    <meta property = "og:title" content = "Blog List" />
-    <meta property = "og:site_name" content = "QTravels" />
     <meta property = "og:image:alt" content = "No images shown" />
 
+    <meta property = "og:title" content = "" />
+    <meta property = "og:site_name" content = "QTravels" />
+    
     <link rel = "shortcut icon" href = "../Assets/Images/Red_Arrow.png">
 
     <style>
@@ -28,34 +28,6 @@
 
         body {
             background-color: #f3f2f2;
-        }
-
-        /* Custom styles for blog cards */
-        #link_box {
-            transition: all 0.3s ease;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        #link_box:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
-
-        #link_box #image_box {
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        #link_box #blog_name {
-            padding: 15px;
-            font-size: 1.1em;
-            color: #333;
-            transition: color 0.3s ease;
-        }
-
-        #link_box:hover #blog_name {
-            color: #3733A8;
         }
     </style>
 
@@ -73,14 +45,14 @@
         <nav id = "navbar">
             <ul id = "taskbar-links">
                 <li> <a href = "../"> HOME </a> </li>
-                <li> <a href = "#"> BLOG LIST </a> </li>
+                <li> <a href = "../blog-list/"> BLOG LIST </a> </li>
                 <li> <a href = "../#intro_main"> ABOUT </a> </li>
                 <li> <a href = "../#featured"> FEATURED </a> </li>
                 <li> <a href = "../#support"> SUPPORT </a> </li>
             </ul>
 
             <div class="search-container">
-                <form action="../blog-search/" method="get">
+                <form action="#" method="get">
                     <div class="search-wrapper">
                         <input type="text" placeholder="Search..." name="search" class="search-box" required>
                         <button type="submit" class="search-button">
@@ -95,57 +67,17 @@
         </nav>
     </header>
 
-    <div class="blog-box quicksand" style="text-align: center; padding: 60px 20px;">
-        <h1 style="font-size: 2.5em; margin-bottom: 20px; color: #3733A8;">Welcome to our Blog Collection</h1>
-        <p style="font-size: 1.2em; color: #666; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-            Explore our curated collection of travel stories, local insights, and destination guides. From the historic streets of Huế to natural wonders, discover the beauty and culture of Vietnam through our eyes.
-        </p>
-    </div>
-
-    <div class = "section-container" style="margin-top: 40px;">
-        <h1 id = "title" style="font-family: Monts-Med; text-transform: uppercase; letter-spacing: 2px;">
-            THÀNH PHỐ HUẾ
-        </h1>
-        
-        <div class = "blog-container" style="padding: 20px 0;"> 
-            <a id = "link_box" href = "../top-dia-diem-hue-check-in/" target = "_blank">
-                <div id = "image_box">
-                    <img src = "../top-dia-diem-hue-check-in/song-huong.png" alt = "Image not found">
-                </div>
-                    
-                <h3 id = "blog_name">
-                    Top địa điểm Huế nên check-in
-                </h3>
-            </a>
-
-            <a id = "link_box" href = "../kham-pha-am-thuc-hue/" target = "_blank">
-                <div id = "image_box">
-                    <img src = "../kham-pha-am-thuc-hue/bun-bo-2.png" alt = "Image not found">
-                </div>
-                    
-                <h3 id = "blog_name">
-                    Khám phá ẩm thực Huế
-                </h3>
-            </a>
-        </div>
-    </div>
-
     <div class = "section-container">
-        <h1 id = "title" style="font-family: Monts-Med; text-transform: uppercase; letter-spacing: 2px;">
-            OTHERS
-        </h1>
-        
-        <div class = "blog-container" style="padding: 20px 0;">     
-            <a id = "link_box" href = "../blog-frame-test/" target = "_blank">
-                <div id = "image_box">
-                    <img src = "../blog-frame-test/nature.png" alt = "Image not found">
-                </div>
-                    
-                <h3 id = "blog_name">
-                    Blog Testing
-                </h3>
-            </a>
+        <div class = "text-center quicksand medium-size">
+            <p>
+                Tất cả kết quả tìm được liên quan đến: 
+    
+                <strong>
+                    <span id = "keyword"></span>
+                </strong>
+            </p>
         </div>
+
     </div>
 </body>
 
@@ -187,4 +119,90 @@
             navbar.style.display = "none";
         }
     });
+</script>
+
+<script>
+    // https://gist.github.com/jarvisluong/f01e108e963092336f04c4b7dd6f7e45
+    // This function converts the string to lowercase, then perform the conversion
+    function toLowerCaseNonAccentVietnamese(str) {
+        str = str.toLowerCase();
+    //     We can also use this instead of from line 11 to line 17
+    //     str = str.replace(/\u00E0|\u00E1|\u1EA1|\u1EA3|\u00E3|\u00E2|\u1EA7|\u1EA5|\u1EAD|\u1EA9|\u1EAB|\u0103|\u1EB1|\u1EAF|\u1EB7|\u1EB3|\u1EB5/g, "a");
+    //     str = str.replace(/\u00E8|\u00E9|\u1EB9|\u1EBB|\u1EBD|\u00EA|\u1EC1|\u1EBF|\u1EC7|\u1EC3|\u1EC5/g, "e");
+    //     str = str.replace(/\u00EC|\u00ED|\u1ECB|\u1EC9|\u0129/g, "i");
+    //     str = str.replace(/\u00F2|\u00F3|\u1ECD|\u1ECF|\u00F5|\u00F4|\u1ED3|\u1ED1|\u1ED9|\u1ED5|\u1ED7|\u01A1|\u1EDD|\u1EDB|\u1EE3|\u1EDF|\u1EE1/g, "o");
+    //     str = str.replace(/\u00F9|\u00FA|\u1EE5|\u1EE7|\u0169|\u01B0|\u1EEB|\u1EE9|\u1EF1|\u1EED|\u1EEF/g, "u");
+    //     str = str.replace(/\u1EF3|\u00FD|\u1EF5|\u1EF7|\u1EF9/g, "y");
+    //     str = str.replace(/\u0111/g, "d");
+        str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+        str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+        str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+        str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+        str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+        str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+        str = str.replace(/đ/g, "d");
+        // Some system encode vietnamese combining accent as individual utf-8 characters
+        str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // Huyền sắc hỏi ngã nặng 
+        str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // Â, Ê, Ă, Ơ, Ư
+        return str;
+    }
+
+    //Parsing the keyword
+    var keyword_string = new URL(window.location.href).searchParams.get("search");
+    keyword_string = toLowerCaseNonAccentVietnamese(keyword_string);
+
+    document.getElementById("keyword").innerHTML = keyword_string;
+    var keyword_array = keyword_string.split(" ");
+
+    //https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
+    function loadJSON(callback) {   
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', '../blog-data.json', true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == 200) {
+                // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                callback(xobj.responseText);
+            }
+        };
+
+        xobj.send(null);  
+    }
+
+
+    loadJSON(function (response) {
+        var data = JSON.parse(response);
+
+        const section_container = document.getElementsByClassName("section-container")[0];
+        section_container.innerHTML += `\n\t\t<br>\n\t\t<div class = "blog-container">\n`;
+
+        const blog_container = document.getElementsByClassName("blog-container")[0];
+
+        Object.entries(data).forEach(([blogFolder, attribute]) => {
+            var iter = 0;
+
+            const blog_keyword = toLowerCaseNonAccentVietnamese(attribute.blogName).split(" ");
+            for (var i = 0; i < blog_keyword.length; ++i) {
+                if (blog_keyword[i] != keyword_array[iter]) continue;
+
+                if (++iter == keyword_array.length) break;
+            }
+
+            if (iter < keyword_array.length) return;
+
+            blog_container.innerHTML += `
+                <a id = "link_box" href = ${attribute.url} target = "_blank">\n
+                    <div id = "image_box">\n
+                        <img src = ${attribute.imageurl} alt = "Image not found">\n
+                    </div>\n
+
+                    <h3 id = "blog_name">${attribute.blogName}</h3>\n
+                </a>\n
+            `;
+        });
+
+        section_container.innerHTML += "\t\t</div>";
+    });
+
+    
 </script>
