@@ -16,7 +16,8 @@
 
     <meta property = "og:title" content = "" />
     <meta property = "og:site_name" content = "QTravels" />
-    
+
+    <title>Blog Search</title>
     <link rel = "shortcut icon" href = "../Assets/Images/Red_Arrow.png">
 
     <style>
@@ -151,7 +152,10 @@
     var keyword_string = new URL(window.location.href).searchParams.get("search");
     keyword_string = toLowerCaseNonAccentVietnamese(keyword_string);
 
+    keyword_string[0] = keyword_string[0].toUpperCase();
     document.getElementById("keyword").innerHTML = keyword_string;
+    keyword_string[0] = keyword_string[0].toLowerCase();
+    
     var keyword_array = keyword_string.split(" ");
 
     //https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
