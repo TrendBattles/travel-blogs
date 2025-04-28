@@ -1,7 +1,7 @@
 <!DOCTYPE html5>
 
 <head>
-    <title></title>
+    <title>Blog Search</title>
 
     <meta charset = "utf-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1" />
@@ -17,7 +17,6 @@
     <meta property = "og:title" content = "" />
     <meta property = "og:site_name" content = "QTravels" />
 
-    <title>Blog Search</title>
     <link rel = "shortcut icon" href = "../Assets/Images/Red_Arrow.png">
 
     <style>
@@ -153,9 +152,9 @@
     var keyword_string = new URL(window.location.href).searchParams.get("search");
     keyword_string = toLowerCaseNonAccentVietnamese(keyword_string);
 
-    keyword_string[0] = keyword_string[0].toUpperCase();
+    keyword_string = String(keyword_string).charAt(0).toUpperCase() + keyword_string.slice(1);
     document.getElementById("keyword").innerHTML = keyword_string;
-    keyword_string[0] = keyword_string[0].toLowerCase();
+    keyword_string = String(keyword_string).charAt(0).toLowerCase() + keyword_string.slice(1);
     
     var keyword_array = keyword_string.split(" ");
 
